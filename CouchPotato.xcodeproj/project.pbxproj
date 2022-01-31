@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		7D2229BA27A37F0C00BF58C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229B927A37F0C00BF58C3 /* AppDelegate.swift */; };
 		7D2229BC27A37F0C00BF58C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229BB27A37F0C00BF58C3 /* SceneDelegate.swift */; };
-		7D2229BE27A37F0C00BF58C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229BD27A37F0C00BF58C3 /* ViewController.swift */; };
+		7D2229BE27A37F0C00BF58C3 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229BD27A37F0C00BF58C3 /* MoviesViewController.swift */; };
 		7D2229C127A37F0C00BF58C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2229BF27A37F0C00BF58C3 /* Main.storyboard */; };
 		7D2229C327A37F3500BF58C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2229C227A37F3500BF58C3 /* Assets.xcassets */; };
 		7D2229C627A37F3500BF58C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2229C427A37F3500BF58C3 /* LaunchScreen.storyboard */; };
 		7D2229D127A37F3600BF58C3 /* CouchPotatoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229D027A37F3600BF58C3 /* CouchPotatoTests.swift */; };
 		7D2229DB27A37F3600BF58C3 /* CouchPotatoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229DA27A37F3600BF58C3 /* CouchPotatoUITests.swift */; };
 		7D2229DD27A37F3600BF58C3 /* CouchPotatoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2229DC27A37F3600BF58C3 /* CouchPotatoUITestsLaunchTests.swift */; };
+		7D2F648627A3C5D40009F6F3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F648527A3C5D40009F6F3 /* MovieCell.swift */; };
+		7DE4DF4427A7A41300BC918F /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7DE4DF4327A7A41300BC918F /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		7D2229B627A37F0C00BF58C3 /* CouchPotato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouchPotato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2229B927A37F0C00BF58C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D2229BB27A37F0C00BF58C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D2229BD27A37F0C00BF58C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D2229BD27A37F0C00BF58C3 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		7D2229C027A37F0C00BF58C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D2229C227A37F3500BF58C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D2229C527A37F3500BF58C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		7D2229D627A37F3600BF58C3 /* CouchPotatoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouchPotatoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2229DA27A37F3600BF58C3 /* CouchPotatoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchPotatoUITests.swift; sourceTree = "<group>"; };
 		7D2229DC27A37F3600BF58C3 /* CouchPotatoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchPotatoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7D2F648527A3C5D40009F6F3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE4DF4427A7A41300BC918F /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +105,12 @@
 			children = (
 				7D2229B927A37F0C00BF58C3 /* AppDelegate.swift */,
 				7D2229BB27A37F0C00BF58C3 /* SceneDelegate.swift */,
-				7D2229BD27A37F0C00BF58C3 /* ViewController.swift */,
+				7D2229BD27A37F0C00BF58C3 /* MoviesViewController.swift */,
 				7D2229BF27A37F0C00BF58C3 /* Main.storyboard */,
 				7D2229C227A37F3500BF58C3 /* Assets.xcassets */,
 				7D2229C427A37F3500BF58C3 /* LaunchScreen.storyboard */,
 				7D2229C727A37F3500BF58C3 /* Info.plist */,
+				7D2F648527A3C5D40009F6F3 /* MovieCell.swift */,
 			);
 			path = CouchPotato;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = CouchPotato;
+			packageProductDependencies = (
+				7DE4DF4327A7A41300BC918F /* AlamofireImage */,
+			);
 			productName = CouchPotato;
 			productReference = 7D2229B627A37F0C00BF58C3 /* CouchPotato.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 7D2229AD27A37F0B00BF58C3;
+			packageReferences = (
+				7DE4DF4227A7A41200BC918F /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 7D2229B727A37F0C00BF58C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D2229BE27A37F0C00BF58C3 /* ViewController.swift in Sources */,
+				7D2229BE27A37F0C00BF58C3 /* MoviesViewController.swift in Sources */,
 				7D2229BA27A37F0C00BF58C3 /* AppDelegate.swift in Sources */,
+				7D2F648627A3C5D40009F6F3 /* MovieCell.swift in Sources */,
 				7D2229BC27A37F0C00BF58C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,11 +451,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8A7T97Y33M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CouchPotato/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Couch Potato";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,11 +481,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8A7T97Y33M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CouchPotato/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Couch Potato";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -598,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DE4DF4227A7A41200BC918F /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DE4DF4327A7A41300BC918F /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DE4DF4227A7A41200BC918F /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D2229AE27A37F0B00BF58C3 /* Project object */;
 }
